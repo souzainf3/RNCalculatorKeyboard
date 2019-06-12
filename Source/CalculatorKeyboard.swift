@@ -182,7 +182,7 @@ open class CalculatorKeyboard: UIView {
     }
     
     private func updateTextInput(with text: String) {
-        guard let responder = UIApplication.shared.findFirstResponder() else {
+        guard let responder = UIResponder.current else {
             return
         }
         
@@ -204,15 +204,15 @@ extension CalculatorKeyboard: UIInputViewAudioFeedback {
 }
 
 extension UIResponder {
-    func findFirstResponder() -> UIResponder? {
-        var responder: UIResponder? = self
-        while responder != nil {
-            guard let r = responder, r.isFirstResponder else {
-                responder = responder?.next
-                continue
-            }
-            return r
-        }
-        return nil
+    private weak static var _currentFirstResponder: UIResponder? = nil
+    
+    public static var current: UIResponder? {
+        UIResponder._currentFirstResponder = nil
+        UIApplication.shared.sendAction(#selector(findFirstResponder(sender:)), to: nil, from: nil, for: nil)
+        return UIResponder._currentFirstResponder
+    }
+    
+    @objc internal func findFirstResponder(sender: AnyObject) {
+        UIResponder._currentFirstResponder = self
     }
 }
