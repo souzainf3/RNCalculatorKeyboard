@@ -27,7 +27,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0M-sf-LJq">
-                    <rect key="frame" x="0.0" y="291" width="230" height="72"/>
+                    <rect key="frame" x="0.0" y="291" width="229.5" height="72"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                     <state key="normal" title="0" backgroundImage="RF_light_button_background">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -218,6 +218,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="bpi-Ks-a0W" firstAttribute="top" secondItem="mMe-iP-D7g" secondAttribute="bottom" constant="1" id="0bz-7f-YGf"/>
+                <constraint firstItem="T0M-sf-LJq" firstAttribute="trailing" secondItem="Qc5-S2-ZMh" secondAttribute="trailing" id="27b-XA-T6g"/>
                 <constraint firstItem="bou-vY-D6O" firstAttribute="height" secondItem="bpi-Ks-a0W" secondAttribute="height" id="2up-y9-5xp"/>
                 <constraint firstItem="T0M-sf-LJq" firstAttribute="top" secondItem="NPX-9a-L5k" secondAttribute="bottom" constant="1" id="4gj-Xo-hOb"/>
                 <constraint firstItem="mMe-iP-D7g" firstAttribute="leading" secondItem="vXK-c0-3AP" secondAttribute="trailing" constant="1" id="56d-kz-Tvc"/>
@@ -279,7 +280,6 @@
                 <constraint firstAttribute="trailing" secondItem="01X-pX-xGE" secondAttribute="trailing" id="rA4-vP-KKl"/>
                 <constraint firstItem="da2-ak-xmw" firstAttribute="leading" secondItem="hY3-7Y-cu0" secondAttribute="trailing" constant="1" id="rPp-DK-9Fd"/>
                 <constraint firstItem="7dr-ZX-ypf" firstAttribute="width" secondItem="Qc5-S2-ZMh" secondAttribute="width" id="rbS-hg-9CF"/>
-                <constraint firstItem="01X-pX-xGE" firstAttribute="leading" secondItem="T0M-sf-LJq" secondAttribute="trailing" constant="116" id="ryQ-66-941"/>
                 <constraint firstItem="mMe-iP-D7g" firstAttribute="height" secondItem="vXK-c0-3AP" secondAttribute="height" id="sGV-La-Zr3"/>
                 <constraint firstItem="NPX-9a-L5k" firstAttribute="width" secondItem="Qc5-S2-ZMh" secondAttribute="width" id="uMm-jH-afD"/>
                 <constraint firstItem="mMe-iP-D7g" firstAttribute="width" secondItem="YNd-Br-Wdo" secondAttribute="width" id="ujB-OC-YNe"/>
@@ -297,7 +297,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="444" y="424.5"/>
+            <point key="canvasLocation" x="443.19999999999999" y="424.13793103448279"/>
         </view>
     </objects>
     <resources>
