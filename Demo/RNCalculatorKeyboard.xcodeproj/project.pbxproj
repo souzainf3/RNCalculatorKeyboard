@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		037D16E522AFF77D006DD4FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D16E422AFF77D006DD4FD /* AppDelegate.swift */; };
+		037D16E722AFF77D006DD4FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D16E622AFF77D006DD4FD /* ViewController.swift */; };
+		037D16EA22AFF77D006DD4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037D16E822AFF77D006DD4FD /* Main.storyboard */; };
+		037D16EC22AFF77E006DD4FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037D16EB22AFF77E006DD4FD /* Assets.xcassets */; };
+		037D16EF22AFF77E006DD4FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037D16ED22AFF77E006DD4FD /* LaunchScreen.storyboard */; };
+		037D16FA22AFF77E006DD4FD /* RNCalculatorKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D16F922AFF77E006DD4FD /* RNCalculatorKeyboardTests.swift */; };
+		037D170522AFF77E006DD4FD /* RNCalculatorKeyboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D170422AFF77E006DD4FD /* RNCalculatorKeyboardUITests.swift */; };
+		037D171922AFFAD7006DD4FD /* CalculatorKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037D171522AFFAD7006DD4FD /* CalculatorKeyboard.xib */; };
+		037D171A22AFFAD7006DD4FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037D171622AFFAD7006DD4FD /* Images.xcassets */; };
+		037D171B22AFFAD7006DD4FD /* CalculatorProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D171722AFFAD7006DD4FD /* CalculatorProcessor.swift */; };
+		037D171C22AFFAD7006DD4FD /* CalculatorKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D171822AFFAD7006DD4FD /* CalculatorKeyboard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		037D16F622AFF77E006DD4FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 037D16D922AFF77C006DD4FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 037D16E022AFF77D006DD4FD;
+			remoteInfo = RNCalculatorKeyboard;
+		};
+		037D170122AFF77E006DD4FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 037D16D922AFF77C006DD4FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 037D16E022AFF77D006DD4FD;
+			remoteInfo = RNCalculatorKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		037D16E122AFF77D006DD4FD /* RNCalculatorKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNCalculatorKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		037D16E422AFF77D006DD4FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		037D16E622AFF77D006DD4FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		037D16E922AFF77D006DD4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		037D16EB22AFF77E006DD4FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		037D16EE22AFF77E006DD4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		037D16F022AFF77E006DD4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037D16F522AFF77E006DD4FD /* RNCalculatorKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNCalculatorKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		037D16F922AFF77E006DD4FD /* RNCalculatorKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNCalculatorKeyboardTests.swift; sourceTree = "<group>"; };
+		037D16FB22AFF77E006DD4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037D170022AFF77E006DD4FD /* RNCalculatorKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNCalculatorKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		037D170422AFF77E006DD4FD /* RNCalculatorKeyboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNCalculatorKeyboardUITests.swift; sourceTree = "<group>"; };
+		037D170622AFF77E006DD4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037D171522AFFAD7006DD4FD /* CalculatorKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorKeyboard.xib; sourceTree = "<group>"; };
+		037D171622AFFAD7006DD4FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		037D171722AFFAD7006DD4FD /* CalculatorProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorProcessor.swift; sourceTree = "<group>"; };
+		037D171822AFFAD7006DD4FD /* CalculatorKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorKeyboard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		037D16DE22AFF77D006DD4FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037D16F222AFF77E006DD4FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037D16FD22AFF77E006DD4FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		037D16D822AFF77C006DD4FD = {
+			isa = PBXGroup;
+			children = (
+				037D16E322AFF77D006DD4FD /* RNCalculatorKeyboard */,
+				037D16F822AFF77E006DD4FD /* RNCalculatorKeyboardTests */,
+				037D170322AFF77E006DD4FD /* RNCalculatorKeyboardUITests */,
+				037D16E222AFF77D006DD4FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		037D16E222AFF77D006DD4FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				037D16E122AFF77D006DD4FD /* RNCalculatorKeyboard.app */,
+				037D16F522AFF77E006DD4FD /* RNCalculatorKeyboardTests.xctest */,
+				037D170022AFF77E006DD4FD /* RNCalculatorKeyboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		037D16E322AFF77D006DD4FD /* RNCalculatorKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				037D171422AFFAD7006DD4FD /* Source */,
+				037D16E422AFF77D006DD4FD /* AppDelegate.swift */,
+				037D16E622AFF77D006DD4FD /* ViewController.swift */,
+				037D16E822AFF77D006DD4FD /* Main.storyboard */,
+				037D16EB22AFF77E006DD4FD /* Assets.xcassets */,
+				037D16ED22AFF77E006DD4FD /* LaunchScreen.storyboard */,
+				037D16F022AFF77E006DD4FD /* Info.plist */,
+			);
+			path = RNCalculatorKeyboard;
+			sourceTree = "<group>";
+		};
+		037D16F822AFF77E006DD4FD /* RNCalculatorKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				037D16F922AFF77E006DD4FD /* RNCalculatorKeyboardTests.swift */,
+				037D16FB22AFF77E006DD4FD /* Info.plist */,
+			);
+			path = RNCalculatorKeyboardTests;
+			sourceTree = "<group>";
+		};
+		037D170322AFF77E006DD4FD /* RNCalculatorKeyboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				037D170422AFF77E006DD4FD /* RNCalculatorKeyboardUITests.swift */,
+				037D170622AFF77E006DD4FD /* Info.plist */,
+			);
+			path = RNCalculatorKeyboardUITests;
+			sourceTree = "<group>";
+		};
+		037D171422AFFAD7006DD4FD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				037D171822AFFAD7006DD4FD /* CalculatorKeyboard.swift */,
+				037D171522AFFAD7006DD4FD /* CalculatorKeyboard.xib */,
+				037D171722AFFAD7006DD4FD /* CalculatorProcessor.swift */,
+				037D171622AFFAD7006DD4FD /* Images.xcassets */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		037D16E022AFF77D006DD4FD /* RNCalculatorKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 037D170922AFF77E006DD4FD /* Build configuration list for PBXNativeTarget "RNCalculatorKeyboard" */;
+			buildPhases = (
+				037D16DD22AFF77D006DD4FD /* Sources */,
+				037D16DE22AFF77D006DD4FD /* Frameworks */,
+				037D16DF22AFF77D006DD4FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNCalculatorKeyboard;
+			productName = RNCalculatorKeyboard;
+			productReference = 037D16E122AFF77D006DD4FD /* RNCalculatorKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		037D16F422AFF77E006DD4FD /* RNCalculatorKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 037D170C22AFF77E006DD4FD /* Build configuration list for PBXNativeTarget "RNCalculatorKeyboardTests" */;
+			buildPhases = (
+				037D16F122AFF77E006DD4FD /* Sources */,
+				037D16F222AFF77E006DD4FD /* Frameworks */,
+				037D16F322AFF77E006DD4FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				037D16F722AFF77E006DD4FD /* PBXTargetDependency */,
+			);
+			name = RNCalculatorKeyboardTests;
+			productName = RNCalculatorKeyboardTests;
+			productReference = 037D16F522AFF77E006DD4FD /* RNCalculatorKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		037D16FF22AFF77E006DD4FD /* RNCalculatorKeyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 037D170F22AFF77E006DD4FD /* Build configuration list for PBXNativeTarget "RNCalculatorKeyboardUITests" */;
+			buildPhases = (
+				037D16FC22AFF77E006DD4FD /* Sources */,
+				037D16FD22AFF77E006DD4FD /* Frameworks */,
+				037D16FE22AFF77E006DD4FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				037D170222AFF77E006DD4FD /* PBXTargetDependency */,
+			);
+			name = RNCalculatorKeyboardUITests;
+			productName = RNCalculatorKeyboardUITests;
+			productReference = 037D170022AFF77E006DD4FD /* RNCalculatorKeyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		037D16D922AFF77C006DD4FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = none;
+				TargetAttributes = {
+					037D16E022AFF77D006DD4FD = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					037D16F422AFF77E006DD4FD = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 037D16E022AFF77D006DD4FD;
+					};
+					037D16FF22AFF77E006DD4FD = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 037D16E022AFF77D006DD4FD;
+					};
+				};
+			};
+			buildConfigurationList = 037D16DC22AFF77D006DD4FD /* Build configuration list for PBXProject "RNCalculatorKeyboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 037D16D822AFF77C006DD4FD;
+			productRefGroup = 037D16E222AFF77D006DD4FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				037D16E022AFF77D006DD4FD /* RNCalculatorKeyboard */,
+				037D16F422AFF77E006DD4FD /* RNCalculatorKeyboardTests */,
+				037D16FF22AFF77E006DD4FD /* RNCalculatorKeyboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		037D16DF22AFF77D006DD4FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037D16EF22AFF77E006DD4FD /* LaunchScreen.storyboard in Resources */,
+				037D171A22AFFAD7006DD4FD /* Images.xcassets in Resources */,
+				037D16EC22AFF77E006DD4FD /* Assets.xcassets in Resources */,
+				037D171922AFFAD7006DD4FD /* CalculatorKeyboard.xib in Resources */,
+				037D16EA22AFF77D006DD4FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037D16F322AFF77E006DD4FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037D16FE22AFF77E006DD4FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		037D16DD22AFF77D006DD4FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037D16E722AFF77D006DD4FD /* ViewController.swift in Sources */,
+				037D16E522AFF77D006DD4FD /* AppDelegate.swift in Sources */,
+				037D171C22AFFAD7006DD4FD /* CalculatorKeyboard.swift in Sources */,
+				037D171B22AFFAD7006DD4FD /* CalculatorProcessor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037D16F122AFF77E006DD4FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037D16FA22AFF77E006DD4FD /* RNCalculatorKeyboardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		037D16FC22AFF77E006DD4FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				037D170522AFF77E006DD4FD /* RNCalculatorKeyboardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		037D16F722AFF77E006DD4FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 037D16E022AFF77D006DD4FD /* RNCalculatorKeyboard */;
+			targetProxy = 037D16F622AFF77E006DD4FD /* PBXContainerItemProxy */;
+		};
+		037D170222AFF77E006DD4FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 037D16E022AFF77D006DD4FD /* RNCalculatorKeyboard */;
+			targetProxy = 037D170122AFF77E006DD4FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		037D16E822AFF77D006DD4FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				037D16E922AFF77D006DD4FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		037D16ED22AFF77E006DD4FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				037D16EE22AFF77E006DD4FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		037D170722AFF77E006DD4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		037D170822AFF77E006DD4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		037D170A22AFF77E006DD4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RNCalculatorKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.RNCalculatorKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		037D170B22AFF77E006DD4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RNCalculatorKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.RNCalculatorKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		037D170D22AFF77E006DD4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RNCalculatorKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.RNCalculatorKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNCalculatorKeyboard.app/RNCalculatorKeyboard";
+			};
+			name = Debug;
+		};
+		037D170E22AFF77E006DD4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RNCalculatorKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.RNCalculatorKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNCalculatorKeyboard.app/RNCalculatorKeyboard";
+			};
+			name = Release;
+		};
+		037D171022AFF77E006DD4FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RNCalculatorKeyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.RNCalculatorKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RNCalculatorKeyboard;
+			};
+			name = Debug;
+		};
+		037D171122AFF77E006DD4FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RNCalculatorKeyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.none.RNCalculatorKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RNCalculatorKeyboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		037D16DC22AFF77D006DD4FD /* Build configuration list for PBXProject "RNCalculatorKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037D170722AFF77E006DD4FD /* Debug */,
+				037D170822AFF77E006DD4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		037D170922AFF77E006DD4FD /* Build configuration list for PBXNativeTarget "RNCalculatorKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037D170A22AFF77E006DD4FD /* Debug */,
+				037D170B22AFF77E006DD4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		037D170C22AFF77E006DD4FD /* Build configuration list for PBXNativeTarget "RNCalculatorKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037D170D22AFF77E006DD4FD /* Debug */,
+				037D170E22AFF77E006DD4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		037D170F22AFF77E006DD4FD /* Build configuration list for PBXNativeTarget "RNCalculatorKeyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				037D171022AFF77E006DD4FD /* Debug */,
+				037D171122AFF77E006DD4FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 037D16D922AFF77C006DD4FD /* Project object */;
+}
