@@ -18,6 +18,7 @@
 		037D171A22AFFAD7006DD4FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037D171622AFFAD7006DD4FD /* Images.xcassets */; };
 		037D171B22AFFAD7006DD4FD /* CalculatorProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D171722AFFAD7006DD4FD /* CalculatorProcessor.swift */; };
 		037D171C22AFFAD7006DD4FD /* CalculatorKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D171822AFFAD7006DD4FD /* CalculatorKeyboard.swift */; };
+		037D171F22B295C1006DD4FD /* UIImge+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037D171E22B295C1006DD4FD /* UIImge+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		037D171622AFFAD7006DD4FD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		037D171722AFFAD7006DD4FD /* CalculatorProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorProcessor.swift; sourceTree = "<group>"; };
 		037D171822AFFAD7006DD4FD /* CalculatorKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorKeyboard.swift; sourceTree = "<group>"; };
+		037D171E22B295C1006DD4FD /* UIImge+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImge+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				037D171822AFFAD7006DD4FD /* CalculatorKeyboard.swift */,
 				037D171522AFFAD7006DD4FD /* CalculatorKeyboard.xib */,
 				037D171722AFFAD7006DD4FD /* CalculatorProcessor.swift */,
+				037D171E22B295C1006DD4FD /* UIImge+Extension.swift */,
 				037D171622AFFAD7006DD4FD /* Images.xcassets */,
 			);
 			name = Source;
@@ -281,6 +284,7 @@
 			files = (
 				037D16E722AFF77D006DD4FD /* ViewController.swift in Sources */,
 				037D16E522AFF77D006DD4FD /* AppDelegate.swift in Sources */,
+				037D171F22B295C1006DD4FD /* UIImge+Extension.swift in Sources */,
 				037D171C22AFFAD7006DD4FD /* CalculatorKeyboard.swift in Sources */,
 				037D171B22AFFAD7006DD4FD /* CalculatorProcessor.swift in Sources */,
 			);

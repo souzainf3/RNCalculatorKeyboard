@@ -8,40 +8,47 @@
 
 import UIKit
 
-public protocol CalculatorDelegate: class {
-    func calculatorKeyboard(_ calculator: CalculatorKeyboard, didChangeValue value: String)
+public protocol CalculatorKeyboardDelegate: class {
+    func calculatorKeyboard(_ keyboard: CalculatorKeyboard, didChangeValue value: String)
 }
 
 public enum ThemeType {
     case light
     case dark
-    case custom(theme: Theme)
+    case custom(theme: ColorTheme)
     
-    public struct Theme {
-        var numbersTextColor: UIColor
-        var numbersBackgroundColor: UIColor
-        var operationsTextColor: UIColor
-        var operationsBackgroundColor: UIColor
-        var equalBackgroundColor: UIColor
-        var equalTextColor: UIColor
+    public struct ColorTheme {
+        let backgroundColor: UIColor
+        let numbersTextColor: UIColor
+        let numbersBackgroundColor: UIColor
+        let operationsTextColor: UIColor
+        let operationsBackgroundColor: UIColor
+        let equalBackgroundColor: UIColor
+        let equalTextColor: UIColor
     }
     
-    var theme: Theme {
+    var theme: ColorTheme {
         switch self {
         case .light:
-            return Theme(numbersTextColor: .black,
-                         numbersBackgroundColor: UIColor(white: 0.97, alpha: 1.0),
-                         operationsTextColor: .white,
-                         operationsBackgroundColor: UIColor(white: 0.75, alpha: 1.0),
-                         equalBackgroundColor: UIColor(red:0.96, green:0.5, blue:0, alpha:1),
-                         equalTextColor: .white)
+            return ColorTheme(
+                backgroundColor: .white,
+                numbersTextColor: .black,
+                numbersBackgroundColor: UIColor(white: 0.97, alpha: 1.0),
+                operationsTextColor: .white,
+                operationsBackgroundColor: UIColor(white: 0.75, alpha: 1.0),
+                equalBackgroundColor: UIColor(red:0.96, green:0.5, blue:0, alpha:1),
+                equalTextColor: .white
+            )
         case .dark:
-            return Theme(numbersTextColor: .black,
-                         numbersBackgroundColor: UIColor(white: 0.97, alpha: 1.0),
-                         operationsTextColor: .white,
-                         operationsBackgroundColor: UIColor(white: 0.75, alpha: 1.0),
-                         equalBackgroundColor: UIColor(red:0.96, green:0.5, blue:0, alpha:1),
-                         equalTextColor: .white)
+            return ColorTheme(
+                backgroundColor: UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1),
+                numbersTextColor: .white,
+                numbersBackgroundColor: UIColor(red:0.40, green:0.40, blue:0.40, alpha:1),
+                operationsTextColor: .white,
+                operationsBackgroundColor: UIColor(red:0.26, green:0.26, blue:0.26, alpha:1),
+                equalBackgroundColor: UIColor(red:0.96, green:0.5, blue:0, alpha:1),
+                equalTextColor: .white
+            )
         case .custom(let theme):
             return theme
         }
@@ -71,7 +78,7 @@ enum CalculatorKey: Int {
 
 open class CalculatorKeyboard: UIView {
     
-    open weak var delegate: CalculatorDelegate?
+    open weak var delegate: CalculatorKeyboardDelegate?
     
     open var themeType: ThemeType = .light {
         didSet {
@@ -79,16 +86,13 @@ open class CalculatorKeyboard: UIView {
         }
     }
     
-    open var showDecimal = true {
+    open var isDecimalEnabled = true {
         didSet {
-            processor.automaticDecimal = !showDecimal
-            adjustLayout()
+            configureDecimal()
         }
     }
     
     fileprivate var processor = CalculatorProcessor()
-    
-    @IBOutlet weak var zeroDistanceConstraint: NSLayoutConstraint!
     
     
     // MARK: - Class Propertie
@@ -157,28 +161,46 @@ open class CalculatorKeyboard: UIView {
     
     // MARK: - Private
     
+    private func configureDecimal() {
+        processor.automaticDecimal = !isDecimalEnabled
+        if let decimalButton = viewWithTag(CalculatorKey.decimal.rawValue) as? UIButton {
+            decimalButton.isEnabled = self.isDecimalEnabled
+        }
+    }
+    
     private func adjustLayout() {
+        configureDecimal()
+        
         let theme = themeType.theme
         
-        for i in 1...CalculatorKey.decimal.rawValue {
+        // Numbers
+        for i in CalculatorKey.zero.rawValue...CalculatorKey.decimal.rawValue {
             if let button = self.viewWithTag(i) as? UIButton {
-                button.tintColor = theme.numbersBackgroundColor
-                button.setTitleColor(theme.numbersTextColor, for: .normal)
+                configureButton(button, titleColor: theme.numbersTextColor, backgroundColor: theme.numbersBackgroundColor)
             }
         }
         
+        // Operators
         for i in CalculatorKey.clear.rawValue...CalculatorKey.add.rawValue {
             if let button = self.viewWithTag(i) as? UIButton {
-                button.tintColor = theme.operationsBackgroundColor
-                button.setTitleColor(theme.operationsTextColor, for: .normal)
-                button.tintColor = theme.operationsTextColor
+                configureButton(button, titleColor: theme.operationsTextColor, backgroundColor: theme.operationsBackgroundColor)
             }
         }
         
+        // Equal
         if let button = self.viewWithTag(CalculatorKey.equal.rawValue) as? UIButton {
-            button.tintColor = theme.equalBackgroundColor
-            button.setTitleColor(theme.equalTextColor, for: .normal)
+            configureButton(button, titleColor: theme.equalTextColor, backgroundColor: theme.equalBackgroundColor)
         }
+        
+        self.backgroundColor = theme.backgroundColor
+    }
+    
+    
+    private func configureButton(_ button: UIButton, titleColor: UIColor, backgroundColor: UIColor) {
+        button.setTitleColor(titleColor, for: .normal)
+        let backgroundImage = button.backgroundImage(for: .normal)?.tinted(color: backgroundColor)
+        button.setBackgroundImage(backgroundImage, for: .normal)
+        button.tintColor = titleColor
     }
     
     private func updateTextInput(with text: String) {
