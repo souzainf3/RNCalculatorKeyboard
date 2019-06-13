@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CalculatorProcessor {
     var automaticDecimal = false {
         didSet {
@@ -23,7 +24,7 @@ class CalculatorProcessor {
     var decimalDigit = 0
     
     
-    func storeOperand(_ value: Int) -> String {
+    func insertDigit(_ value: Int) -> String {
         let operand = "\(value)"
         if currentOperand == "0" {
             currentOperand = operand

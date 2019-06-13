@@ -136,7 +136,7 @@ open class CalculatorKeyboard: UIView {
         
         switch key {
         case .zero,.one, .two, .three, .four, .five, .six, .seven, .eight, .nine:
-            output = processor.storeOperand(sender.tag-1)
+            output = processor.insertDigit(sender.tag-1)
             
         case .decimal:
             output = processor.addDecimal()
