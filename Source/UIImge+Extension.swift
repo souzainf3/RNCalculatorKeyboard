@@ -8,31 +8,24 @@
 
 import UIKit
 
-extension UIImage {
-    
-    func tinted(color: UIColor) -> UIImage {
+
+extension UIButton {
+    // https://spin.atomicobject.com/2018/04/25/uibutton-background-color/
+    private func image(withColor color: UIColor) -> UIImage? {
+        let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
         
-        UIGraphicsBeginImageContext(self.size)
-        guard let context = UIGraphicsGetCurrentContext() else { return self }
-        guard let cgImage = cgImage else { return self }
+        context?.setFillColor(color.cgColor)
+        context?.fill(rect)
         
-        // flip the image
-        context.scaleBy(x: 1.0, y: -1.0)
-        context.translateBy(x: 0.0, y: -size.height)
-        
-        // multiply blend mode
-        context.setBlendMode(.multiply)
-        
-        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        context.clip(to: rect, mask: cgImage)
-        color.setFill()
-        context.fill(rect)
-        
-        // create uiimage
-        guard let newImage = UIGraphicsGetImageFromCurrentImageContext() else { return self }
+        let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return newImage
+        return image
     }
     
+    func setBackgroundColor(_ color: UIColor, for state: UIControl.State) {
+        self.setBackgroundImage(image(withColor: color), for: state)
+    }
 }

@@ -197,10 +197,9 @@ open class CalculatorKeyboard: UIView {
     
     
     private func configureButton(_ button: UIButton, titleColor: UIColor, backgroundColor: UIColor) {
-        button.setTitleColor(titleColor, for: .normal)
-        let backgroundImage = button.backgroundImage(for: .normal)?.tinted(color: backgroundColor)
-        button.setBackgroundImage(backgroundImage, for: .normal)
         button.tintColor = titleColor
+        button.setTitleColor(titleColor, for: .normal)
+        button.setBackgroundColor(backgroundColor, for: .normal)
     }
     
     private func updateTextInput(with text: String) {
