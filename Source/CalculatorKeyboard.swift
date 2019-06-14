@@ -23,8 +23,8 @@ public enum ThemeType {
         let numbersBackgroundColor: UIColor
         let operationsTextColor: UIColor
         let operationsBackgroundColor: UIColor
-        let equalBackgroundColor: UIColor
         let equalTextColor: UIColor
+        let equalBackgroundColor: UIColor
     }
     
     var theme: ColorTheme {
@@ -36,8 +36,8 @@ public enum ThemeType {
                 numbersBackgroundColor: UIColor(white: 0.97, alpha: 1.0),
                 operationsTextColor: .white,
                 operationsBackgroundColor: UIColor(white: 0.75, alpha: 1.0),
-                equalBackgroundColor: UIColor(red:0.96, green:0.5, blue:0, alpha:1),
-                equalTextColor: .white
+                equalTextColor: .white,
+                equalBackgroundColor: UIColor(red:0.96, green:0.5, blue:0, alpha:1)
             )
         case .dark:
             return ColorTheme(
@@ -46,8 +46,8 @@ public enum ThemeType {
                 numbersBackgroundColor: UIColor(red:0.40, green:0.40, blue:0.40, alpha:1),
                 operationsTextColor: .white,
                 operationsBackgroundColor: UIColor(red:0.26, green:0.26, blue:0.26, alpha:1),
-                equalBackgroundColor: UIColor(red:0.96, green:0.5, blue:0, alpha:1),
-                equalTextColor: .white
+                equalTextColor: .white,
+                equalBackgroundColor: UIColor(red:0.96, green:0.5, blue:0, alpha:1)
             )
         case .custom(let theme):
             return theme
